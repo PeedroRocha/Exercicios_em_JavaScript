@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 20</title>
+</head>
+<body>
+    <h1>Verificando Numeros</h1>
+    <p>Digite um número para descobrir se ele é <b>PAR</b> ou <b>IMPAR</b>.</p>
+    <p>Digite o número: <input type="number" name="n_txt" id="n_txt"></p>
+    <input type="button" value="Verificar" onclick="verificar()">
+    <p><div id="res">Aqui irá aparecer a resposta</div></p>
+
+    <script>
+        function verificar() {
+            var ntxt = document.querySelector('input#n_txt')
+            var numero = Number(ntxt.value)
+            var verf = numero % 2
+            if (verf == 0) {
+                res.innerHTML = `O número ${numero} é par.`
+            }
+            else {
+                res.innerHTML = `O número ${numero} é impar`
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

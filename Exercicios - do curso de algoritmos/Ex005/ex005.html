@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota do aluno</title>
+</head>
+<body>
+    <h1>Média da Nota do Aluno</h1>
+    <p>Digite as duas notas do aluno:</p>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Calcular Média" onclick="calcular()">
+    <div id="res">Aqui irá aparecer o resultado</div>
+
+    <script>
+        function calcular() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var media = (n1 + n2) / 2
+            res.innerHTML = `A média entre ${n1} e ${n2} é igual a ${media}`
+        }
+
+    </script>
+</body>
+</html>

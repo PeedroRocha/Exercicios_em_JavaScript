@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 25</title>
+</head>
+<body>
+    <h1>Verificador dres.innerHTML = `<b>É</b> possível criar um triângulo com essas retas`e Triângulos</h1>
+    <p>Informe o comprimento em metros de três(3) retas, após o programa irá verificar se é possível formar um triângulo.</p>
+    <p>Primeira reta: <input type="number" name="reta1_txt" id="reta1_txt"></p>
+    <p>Segunda reta: <input type="number" name="reta2_txt" id="reta2_txt"></p>
+    <p>Terceira reta: <input type="number" name="reta3_txt" id="reta3_txt"></p>
+    <p><input type="button" value="Verificar" onclick="verificar()"></p>
+    <div id="res"></div>
+
+    <script>
+        function verificar() {
+            reta1txt = document.querySelector('#reta1_txt')
+            reta2txt = document.querySelector('#reta2_txt')
+            reta3txt = document.querySelector('#reta3_txt')
+            reta1 = Number(reta1txt.value)
+            reta2 = Number(reta2txt.value)
+            reta3 = Number(reta3txt.value)
+            if ( reta1 > reta2 + reta3 ) {
+                res.innerHTML = `<b>NÃO</b> possível criar um triângulo com essas retas`
+            } else if ( reta2 > reta1 + reta3 ) {
+                res.innerHTML = `<b>NÃO</b> possível criar um triângulo com essas retas`
+            } else if ( reta3 > reta1 + reta2 ) {
+                res.innerHTML = `<b>NÃO</b> possível criar um triângulo com essas retas`
+            } else {
+                res.innerHTML = `<b>É</b> possível criar um triângulo com essas retas`
+            }
+        }
+    </script>
+
+    
+</body>
+</html>

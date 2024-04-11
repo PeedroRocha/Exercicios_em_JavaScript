@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 07</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+        input {
+            font: normal 18pt Arial;
+        }
+        div {
+            font: normal 18pt Arial;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando o dobro e terça parte de um número</h1>
+    <p>Digite um número para calcular o dobro e terça parte do mesmo:</p>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="button" value="Calcular" onclick="calcular()">
+    <div id="res_dobro">O resultado irá aparecer aqui</div>
+    <div id="res_terco">O resultado irá aparecer aqui</div>
+
+    <script>
+        function calcular() {
+            var tn1 = window.document.querySelector('input#txtn1')
+            var res = window.document.querySelector('div#res')
+            var numero = Number(tn1.value)
+            var dobro = numero * 2
+            var terco = numero / 3
+            res_dobro.innerHTML = `O dobro do número ${numero} é igual á ${dobro}`
+            res_terco.innerHTML = `O terço do número ${numero} é igual á ${terco}`
+        }
+    </script>
+    
+</body>
+</html>

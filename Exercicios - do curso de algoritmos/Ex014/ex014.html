@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 14</title>
+</head>
+<body>
+    <h1>Locadora de Carros</h1>
+    <p>Digitea a quantidade de dias de locação e os Kilometros Rodadoas para calcular o valor a ser cobrado.</p>
+    <p>Dias Locados:</p>
+    <input type="number" name="dias_txt" id="dias_txt">
+    <p>Kilometros(KM) rodados:</p>
+    <input type="number" name="km_txt" id="km_txt">
+    <input type="button" value="Calcular" onclick="calcular()">
+    <div id="res">Aqui irá aparecer o resultado:</div>
+
+    <script>
+        function calcular () {
+            var diastxt = window.document.querySelector('input#dias_txt')        
+            var kmtxt = window.document.querySelector('input#km_txt')
+            var dias = Number(diastxt.value)
+            var km = Number(kmtxt.value)
+            var total = (90 * dias) + ( km * 0.20)
+            res.innerHTML = `O valor total da diária ficou em R$${total}.`  
+
+        }
+
+    </script>
+    
+</body>
+</html>

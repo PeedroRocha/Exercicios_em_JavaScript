@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 009 de outro aluno</title>
+</head>
+<body>
+    <h1>Você é Estrangeiro?</h1>
+    <p>Onde Você vive? <input type="text" name="txtnac" id="txtnac"></p>
+    <p>Digite o seu nome:  <input type="text" name="yname" id="yname"></p>
+    <input type="button" value="Enviar Informação" onclick="enviar()">
+    <div id="info">
+        
+    </div>
+
+    <script>
+        function enviar() {
+            let nacionalidade = window.document.querySelector('input#txtnac')
+            let res = window.document.querySelector('div#info')
+            let pais = nacionalidade.value.toLowerCase()
+            let mostrar = nacionalidade.value
+            let yname = window.document.querySelector('input#yname')
+            let outname = yname.value
+            res.innerHTML = `Olá ${outname}, Você é do país, ${mostrar}`
+            if (pais == 'brasil'){
+                res.innerHTML += '<p>Você é Brasileiro.</p>'
+            } else   {
+                res.innerHTML += '<p> Você é Estrangeiro. </p>'
+            }
+
+
+        }
+
+
+
+    </script>
+</body>
+</html>

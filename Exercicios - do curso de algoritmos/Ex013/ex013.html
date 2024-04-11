@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 13</title>
+</head>
+<body>
+    <h1>Aumento de Salário</h1>
+    <p>Digite o nome do funcionário:</p>
+    <input type="text" id="nometxt">
+    <p>Digite o salário de funcionário:</p>
+    <input type="number" name="salario_txt" id="salario_txt">
+    <input type="button" value="Calcular" onclick="calcular()">
+    <div id="res">Aqui irá aparecer o resultado final:</div>
+
+    <script>
+        function calcular() {
+            var nome = window.document.getElementById('nometxt')
+            var salariotxt = window.document.getElementById('salario_txt')
+            var sal = Number(salariotxt.value)
+            var sal_aumento = sal * 1.15
+            res.innerHTML = `O novo salário do funcionário <b>${nome}</b> é de <b>R$${sal_aumento}</b>.`
+        }
+    </script>
+</body>
+</html>

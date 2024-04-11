@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrador de Medidas</title>
+    
+</head>
+<body>
+    <h1>Mostrador de Medidas</h1>
+    <p>Digite uma medida em metros</p>
+    <input type="number" name="medida_txt" id="medida_txt">
+    <input type="button" value="Calcular" onclick="resultado()">
+    <div id="res">Aqui ira aparecer as medidas calculadas:</div>
+    <script>
+        function resultado(){
+            var tn1 = window.document.querySelector('input#medida_txt')
+            var medida = Number(tn1.value)
+            var Km = medida / 1000
+            var Hm = medida / 100
+            var Dam = medida / 10
+            var dm = medida * 10
+            var cm = medida * 100
+            var mm = medida * 1000
+            res.innerHTML = `
+            <p>A distância de "${medida}"metros corresponde a:</p>
+            <p><b>Km</b> = ${Km} </p>
+            <p><b>Hm</b> = ${Hm} </p>
+            <p><b>Dam</b> = ${Dam} </p>
+            <p><b>dm</b> = ${dm} </p>
+            <p><b>cm</b> = ${cm} </p>
+            <p><b>mm</b> = ${mm} </p> `
+        }
+    </script>
+</body>
+</html>

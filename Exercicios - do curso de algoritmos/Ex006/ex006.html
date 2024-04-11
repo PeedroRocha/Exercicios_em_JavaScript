@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número antecessor e sucessor</title>
+    <style>
+        body {
+            font: normal 15pt Arial;
+        }
+        input {
+            font: normal 15pt Arial;
+            width: 180px;
+        }
+        div#res-ant {
+            margin-top: 15px;
+        }
+        div#res-suc {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Número antecessor e sucessor</h1>
+    <p>Digite um número:</p>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="button" value="Mostrar resultado" onclick="calcular()">
+    <div id="res-ant">Aqui irá aparecer a resposta do antecessor</div>
+    <div id="res-suc">Aqui irá aparecer a resposta do sucessor</div>
+    <!-- Fazer os ajustes em CSS para melhorar o vidual da página-->
+
+
+    <script>
+        function calcular () {
+            var tn1 = window.document.getElementById('txtn1')
+            var res1 = window.document.getElementById('res-ant')
+            var res2 = window.document.getElementById('res-suc')
+            var numero = Number(tn1.value)
+            var ant = numero - 1
+            var suc = numero + 1
+            res1.innerHTML = `O antecessor de ${numero} é ${ant}`
+            res2.innerHTML = `O sucessor de ${numero} é ${suc}`
+
+        }
+    </script>    
+</body>
+</html>

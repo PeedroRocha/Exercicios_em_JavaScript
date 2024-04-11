@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 017</title>
+</head>
+<body>
+    <h1>Sistema De Verificação de Velocidade</h1>
+    Digite a velocidade do veículo: <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="Verificar"  onclick="verificar()">
+    <div id="res"><p>Aqui irá aparecer a resposta:</p></div>
+
+    <script>
+        function verificar() {
+            var txtvel = document.querySelector('input#txtvel')
+            var vel = (txtvel.value)
+            var multa = (vel - 60) * 5
+            res.innerHTML = `<p>Sua velocidade atual é de <b>${vel}Km/h</b>.</p>`
+            if (vel > 60) {
+                res.innerHTML += `<p> Você foi <b>MULTADO</b>!`
+                res.innerHTML += `<p>O veículo está acima do limite de velocidade. Valor da multa: R$${multa} </p>`
+            } 
+            res.innerHTML += `<p>Digija sempre com cinto de sugurança!</p>`
+        }
+    </script>
+    
+</body>
+</html>

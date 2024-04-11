@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    var numero = window.prompt("Digite um valor em Reais, pois será formatado em BRL")
+    numero.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+    document.write(`O valor formatado em Reais é ${numero.toLocaleString}`)
+  </script>  
+</body>
+</html>

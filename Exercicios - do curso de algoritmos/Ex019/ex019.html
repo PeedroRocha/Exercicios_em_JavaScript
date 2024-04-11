@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 019</title>
+</head>
+<body>
+    <h1>Verificando A Média Do Aluno:</h1>
+    <p>Digite as duas notas do aluno para que seja calculada a média do mesmo:</p>
+    Digite a primeira nota:<input type="number" name="n1_txt" id="n1_txt">
+    <p>Digite a segunda nota:<input type="number" name="n2_txt" id="n2_txt"></p>
+    <input type="button" value="Calular Média" onclick="calcular()">
+    <div id="res"><p>A resposta irá aparecer aqui.</p></div>
+
+    <script>
+        function calcular() {
+            var n1txt = document.getElementById('n1_txt')
+            var n2txt = document.getElementById('n2_txt')
+            var n1 = Number(n1txt.value)
+            var n2 = Number(n2txt.value)
+            var media = (n1 + n2) / 2
+            res.innerHTML = `<p>A média do aluno foi de <b>${media}</b>.</p>`
+            
+            if (media >= 7) {
+                res.innerHTML += `<p>O aluno teve um <b>BOM</b> aproveitamento.</p>`    
+            }
+           else {
+                res.innerHTML += `<p>O aluno teve um <b>MAL</b> aproveitamento.<p/>`
+            }
+
+        }
+    </script>
+    
+</body>
+</html>

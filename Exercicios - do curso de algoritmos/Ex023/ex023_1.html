@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 23(2.0)</title>
+</head>
+<body>
+    <h1>Promoção do Dia das Mulheres</h1>
+    <p>Preecha o formulário para calcular o desconto.</p>
+    Nome do(a) Cliente: <input type="text" name="nome_txt" id="nome_txt">
+    <p>Qual o sexo do cliente?: 
+        <input type="radio" name="radsex" id="mas" checked>
+        <label for="mas">Masculino</label>
+        <input type="radio" name="radsex" id="fem">
+        <label for="fem">Feminino</label>
+    </p>
+    <p>Valor das Compras: <input type="number" name="preco_txt" id="preco_txt"> </p>
+    <input type="button" value="Calcular" onclick="calcular()">
+    <p><div id="res">Aqui irá aparecer a resposta:</div></p>
+    
+    <script>
+        function calcular() {
+            var nometxt = document.getElementById('nome_txt')
+            var fsex = document.getElementsByName('radsex')
+            var precotxt = document.getElementById('preco_txt')
+            var nome = (nometxt.value)
+            var preco = Number(precotxt.value)
+            var desc1 = preco * 0.95
+            var desc2 = preco * 0.87
+            if (fsex[0].checked) {
+                res.innerHTML = `O cliente ${nome} do sexo Masculino, recebeu o desconto de 5%, sua compra ficou em ${desc1}`
+            } else {
+                res.innerHTML = `A clinte <b>${nome}</b> do sexo Feminino, recebeu o desconto de 13%. Sua compra ficou em <b>R$${desc2}</b>`
+            }
+
+        }
+
+    </script>
+</body>
+</html>

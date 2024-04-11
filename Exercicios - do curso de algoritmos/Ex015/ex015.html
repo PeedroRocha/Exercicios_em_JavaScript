@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 15</title>
+</head>
+<body>
+    <h1>Calculo de Salário:</h1>
+    <p>Digite a quantidade de dias que o funcionário trabalhou:</p>
+    <input type="number" name="dias_txt" id="dias_txt">
+    <input type="button" value="Calcular" onclick="calcular()">
+    <div id="res"></div>
+
+    <script>
+        function calcular() {
+            var diastxt = window.document.querySelector('input#dias_txt')
+            var dias = Number(diastxt.value)
+            var sal = 200 * dias
+            res.innerHTML = `O valor que o funcionário irá receber é de R$${sal}`
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+    <style>
+        div {
+            margin-top: 15px ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Moedas</h1>
+    <p>Digite o seu saldo em R$(Reais): </p>
+    <input type="number" name="valortn1" id="valortn1">
+    <input type="button" value="Converter" onclick="resultado()">
+    <div id="res">O valor da conversão irá aparecer aqui:</div>
+
+    <script>
+        function resultado() {
+            var tn1 = window.document.querySelector('input#valortn1')
+            var n1 = Number(tn1.value)
+            var convert = n1 / 3.45
+            res.innerHTML = `Você poderá comprar até <b>U$${convert}</b> Dolares Americanos`
+        }
+
+    </script>
+</body>
+</html>

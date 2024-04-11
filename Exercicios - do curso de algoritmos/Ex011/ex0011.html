@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equação de Segundo Graul</title>
+</head>
+<body>
+    <h1>Calculando a Equação de Segundo Graul</h1>
+    <p>Digite o valor de <strong>"A"</strong>:</p>
+    <input type="number" name="a_txt" id="a_txt">
+    <p>Digite o valor de <strong>"B"</strong>:</p>
+    <input type="number" name="b_txt" id="b_txt">
+    <p>Digite o valor de <strong>"C"</strong>:</p>
+    <input type="number" name="c_txt" id="c_txt">
+    <input type="button" value="Calcular" onclick="calcular()">
+    <div id="res">Aqui irá aparecer a resposta:</div>   
+    <script>
+        function calcular() {
+        var atxt = window.document.querySelector('input#a_txt')
+        var btxt = window.document.querySelector('input#b_txt')
+        var ctxt = window.document.querySelector('input#c_txt')
+        var a = Number(atxt.value)
+        var b = Number(btxt.value)
+        var c = Number(ctxt.value)
+        var delta = (b)^2 - (4 * a * c)
+        res.innerHTML = `O valor de <b>Delta</b> é <b>${delta}</b>`    
+        }
+
+    </script>  
+</body>
+</html>

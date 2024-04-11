@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 23</title>
+</head>
+<body>
+    <h1>Promoção do Dia das Mulheres</h1>
+    <p>Preencha o formulário para calcular o desconto.</p>
+    Nome do cliente: <input type="text" name="nome_txt" id="nome_txt">
+    <p>Qual o sexo do cliente? [M/F] ?:  <input type="text" name="sexo_txt" id="sexo_txt"></p>
+    <p>Valor das compras<input type="number" name="preco_txt" id="preco_txt"></p>
+    <input type="button" value="Calcular" onclick="calcular()">
+    <div id="res"></div>
+
+    <script>
+        function calcular() {
+            var nometxt = document.getElementById('nome_txt')
+            var sexotxt = document.getElementById('sexo_txt')
+            var precotxt = document.getElementById('preco_txt')
+            var nome = (nometxt.value)
+            var sexo = (sexotxt.value)
+            var preco = Number(precotxt.value)
+            var desc1 = preco * 0.95
+            var desc2 = preco * 0.87
+            if (sexo == 'M') {   //Vericar o porque não está reconhecendo essa string"M"
+                res.inneHTML = `O valor das compras com desconto é de ${desc1}`
+            }
+            else {
+                res.innerHTML = `O valor das compras com desconto é de ${desc2}`
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

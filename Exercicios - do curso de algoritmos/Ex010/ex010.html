@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10 - Algorítimos</title>
+</head>
+<body>
+    <h1>Calculando a Quantidade de Tinta</h1>
+    <p>Digite a altura e largura de uma parede para calcular a quantidade de tinta necessára:</p>
+    <p>Digite a <strong>ALTURA</strong> da parede:</p>
+    <input type="number" name="altura_txt1" id="altura_txt1">
+    <p>Digite a <strong>LARGURA</strong> da parede:</p>
+    <input type="number" name="largura_txt2" id="largura_txt2">
+    <input type="button" value="Calcular" onclick="calcular()">
+    <div id="res">Aqui vai aparecer o resultado:</div>
+
+    <script>
+        function calcular(){   
+        var txt1 = window.document.querySelector('input#altura_txt1')
+        var txt2 = window.document.querySelector('input#largura_txt2')
+        var altura = Number(txt1.value)
+        var largura = Number(txt2.value)
+        var metros = altura * largura
+        var litros = metros / 2
+        res.innerHTML = `A área a ser pintada é de ${metros} metros quadrados, com isso será necessário ${litros} litros de tinta.`
+    }
+    </script>
+    
+</body>
+</html>

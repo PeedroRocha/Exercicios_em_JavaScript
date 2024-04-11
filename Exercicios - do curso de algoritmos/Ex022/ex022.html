@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 022</title>
+</head>
+<body>
+    <h1>Alistamento Militar</h1>
+    <p>Digite o nome do recruta e o ano de nascimento para saber sua situação em relação ao alistamento militar.</p>
+    Digite o nome no recruta: <input type="text" name="nome_txt" id="nome_txt">
+    <p>Digite o ano de nascimento do recruta: <input type="number" name="ano_txt" id="ano_txt"></p>
+    <input type="button" value="Verificar" onclick="verificar()">
+    <p><div id="res"></div></p>
+
+    <script>
+        function verificar() {
+            var nometxt = document.querySelector('input#nome_txt')
+            var anotxt = document.querySelector('input#ano_txt')
+            var nome = (nometxt.value)
+            var ano = Number(anotxt.value)
+            var ano_alist = 2024 - ano
+            var ano_falt = 18 - ano_alist
+            
+            if (ano_alist < 18) {
+                res.innerHTML = `Faltam ${ano_falt} anos para o recruta ${nome} se apresentar ao alistamento militar.`
+            }
+            else {
+                res.innerHTML = `Já se passaram ${ano_falt} para o recruta${nome} se apresentar no alistamento militar.`
+             } 
+        }
+
+    </script>
+
+    
+</body>
+</html>
