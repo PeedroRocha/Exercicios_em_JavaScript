@@ -6,5 +6,9 @@ var f = Number(f_txt.value)
 var inc = Number(inc_txt.value)
 
 function contar() {
-    
+   res.innerHTML += `Contando...` 
+   for (var num = i; num <= f; num = (num + inc) ) {
+        res.innerHTML += ` ${num} ,`
+   }
+   res.innerHTML += ` Acabou!`
 }
