@@ -11,6 +11,11 @@ function somar() {
     var n4 = Number(n4_txt.value)
     var n5 = Number(n5_txt.value)
     var n6 = Number(n6_txt.value)
+    var cont = 0
+    var par = 0
+    var inpar = 0
+    // continuação do exercício(acredito que devemos usar o for, como visto na aula 14)...
     var soma = n1 + n2 + n3 + n4 + n5 + n6 
     res.innerHTML += `${soma}`
+
 }
